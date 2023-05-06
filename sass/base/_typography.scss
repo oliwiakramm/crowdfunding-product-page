@@ -1,0 +1,27 @@
+@use "../abstracts" as a;
+
+h2,
+h3 {
+  font-weight: 700;
+  color: a.$black-clr;
+}
+
+.secondary__heading {
+  font-size: 1.29rem;
+  font-size: clamp(1.29rem, calc(1rem + 1.2vw), 1.75rem);
+
+  &--secondary {
+    font-size: 1.15rem;
+    font-size: 1.25rem;
+    @include a.media-breakpoint-up(50em) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.tertiary__heading {
+  font-size: 0.88rem;
+  @include a.media-breakpoint-up(50em) {
+    font-size: 1.13rem;
+  }
+}

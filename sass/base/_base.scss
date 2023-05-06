@@ -1,0 +1,29 @@
+@use "../abstracts" as a;
+body {
+  min-height: 100vh;
+  font-family: a.$main-font;
+  background-color: #f8f8f8;
+  background-image: url(../images/image-hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 18.7rem;
+  color: a.$txt-clr;
+  @include a.media-breakpoint-up(62.5em) {
+    background-image: url(../images/image-hero-desktop.jpg);
+    background-size: 100% 25rem;
+  }
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.main {
+  padding: 0 1.5rem;
+  max-width: 36rem;
+  margin: 0 auto 2rem;
+
+  @include a.media-breakpoint-up(50em) {
+    max-width: 45.7rem;
+    padding: 0;
+  }
+}

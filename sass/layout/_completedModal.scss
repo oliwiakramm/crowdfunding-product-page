@@ -1,0 +1,58 @@
+@use "../abstracts" as a;
+
+.completed__modal {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+.completedModal {
+  background-color: #fff;
+  margin: 9rem auto;
+  padding: 2rem 1.5rem 2.5rem;
+  border-radius: 8px;
+  @include a.flex;
+  gap: 1.5rem;
+  text-align: center;
+  max-width: 33.7rem;
+
+  @include a.media-breakpoint-up(50em) {
+    margin: 10rem auto 0;
+    padding: 2.9rem 2.5rem 3rem;
+    gap: 3rem;
+  }
+
+  &__img {
+    @include a.media-breakpoint-up(50em) {
+      width: 5.7rem;
+    }
+  }
+
+  &__heading {
+    font-size: 1.13rem;
+    @include a.media-breakpoint-up(50em) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    @include a.media-breakpoint-up(50em) {
+      font-size: 1rem;
+      line-height: 1.83;
+      margin-top: -2rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    padding: 1rem 2.1rem;
+    @include a.media-breakpoint-up(50em) {
+      margin-top: -1rem;
+    }
+  }
+}

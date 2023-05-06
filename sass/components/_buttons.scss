@@ -1,0 +1,27 @@
+@use "../abstracts" as a;
+.btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 2rem;
+  transition: background-color 0.15s ease-in;
+  background-color: a.$btn-clr;
+
+  &--primary {
+    font-size: 0.95rem;
+
+    @include a.media-hover-effect {
+      &:hover {
+        background-color: darken(a.$btn-clr, 10%);
+      }
+    }
+  }
+
+  &--secondary {
+    background-color: lighten(a.$txt-clr, 30%);
+    padding: 1rem 2.5rem;
+  }
+}

@@ -1,0 +1,31 @@
+@use "../abstracts" as a;
+.header {
+  padding: 2rem 1.5rem;
+  @include a.flex($justify: space-between, $direction: row);
+  @include a.media-breakpoint-up(62.5em) {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 3rem 0.5rem 3rem 0.3rem;
+  }
+
+  @include a.media-breakpoint-up(78em) {
+    max-width: 70rem;
+  }
+
+  &__btn {
+    cursor: pointer;
+    margin-top: 2px;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    @include a.media-hover-effect {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    @include a.media-breakpoint-up(62.5em) {
+      display: none;
+    }
+  }
+}
